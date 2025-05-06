@@ -5,15 +5,16 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import network.ClientThread;
 
 import java.io.IOException;
 
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+
+
         ClientSocket.getInstance().getSocket();
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("welcomeScreen.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("WelcomeScreen.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 400);
         stage.setTitle("Shop!");
         stage.setScene(scene);
@@ -39,11 +40,6 @@ public class Main extends Application {
                 ClientSocket.getInstance().getSocket();
             }
 
-            try {
-                Thread.sleep(5000); // Пауза 5 секунд
-            } catch (InterruptedException e) {
-                e.printStackTrace(); // Обработка исключения, если сон был прерван
-            }
         }
 
     }

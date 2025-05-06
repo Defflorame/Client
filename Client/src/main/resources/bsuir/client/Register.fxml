@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsuir.client.registerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsuir.client.RegisterController">
     <children>
         <Label layoutX="253.0" layoutY="39.0" lineSpacing="5.0" prefHeight="47.0" prefWidth="194.0" text="Регистрация" textFill="WHITE">
             <font>
@@ -33,9 +33,11 @@
                         <Image url="@getbackicon.png" />
                     </image>
                 </ImageView>
-            <Label fx:id="login_check" layoutX="47.0" layoutY="54.0" text="Логин должен содержать от 6 до 16 символов" textFill="#bc1515" visible="false" />
-            <Label fx:id="password_check" layoutX="47.0" layoutY="116.0" text="Пароль должен содержать минимум 8 симолов" textFill="#bc1515" visible="false" />
-            <Label fx:id="reppassword_check" layoutX="47.0" layoutY="182.0" text="Пароли не совпадают" textFill="#bc1515" visible="false" />
+            <Label fx:id="login_check" layoutX="47.0" layoutY="54.0" text="Логин должен содержать от 4 до 16 символов" textFill="#bc1515" />
+            <Label fx:id="password_check" layoutX="47.0" layoutY="116.0" text="Пароль должен содержать минимум 4 симолов" textFill="#bc1515" />
+            <Label fx:id="reppassword_check" layoutX="47.0" layoutY="182.0" text="Пароли не совпадают" textFill="#bc1515" />
+            <Label fx:id="phone_check" layoutX="369.0" layoutY="116.0" prefHeight="17.0" prefWidth="122.0" text="Номер телефона пуст" textFill="#bc1515" />
+            <Label fx:id="adress_check" layoutX="370.0" layoutY="54.0" text="Адрес пуст" textFill="#bc1515" />
             </children>
         </AnchorPane>
     </children>

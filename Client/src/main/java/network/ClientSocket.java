@@ -1,6 +1,6 @@
 package network;
 
-import Entity.User;
+import EntityDTO.UserDTO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 public class ClientSocket {
     @Getter
     @Setter
-    private User user;
+    private UserDTO userDTO;
     private static Socket socket;
     private BufferedReader in;
     @Getter
@@ -36,15 +36,13 @@ public class ClientSocket {
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream());
         } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
     public static ClientSocket getInstance()
     {
         return SINGLE_INSTANCE;
     }
-
-
-
     public Socket getSocket()
     {
         return socket;
@@ -53,7 +51,6 @@ public class ClientSocket {
     {
         return in;
     }
-
 
     public void disconnect() {
         try {

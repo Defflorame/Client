@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsuir.client.welcomeScreenController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsuir.client.WelcomeScreenController">
    <children>
       <AnchorPane layoutX="-5.0" layoutY="140.0" prefHeight="265.0" prefWidth="710.0" style="-fx-background-color: #5F9EA0;">
          <children>
@@ -24,8 +24,8 @@
                   <Font size="19.0" />
                </font>
             </Button>
-            <Label fx:id="login_check" layoutX="202.0" layoutY="47.0" text="Логин должен содержать от 6 до 16 символов" textFill="#bc1515" visible="false" />
-            <Label fx:id="password_check" layoutX="202.0" layoutY="113.0" text="Пароль должен содержать минимум 8 симолов" textFill="#bc1515" visible="false" />
+            <Label fx:id="login_check" layoutX="202.0" layoutY="47.0" text="Логин должен содержать от 4 до 16 символов" textFill="#bc1515" visible="false" />
+            <Label fx:id="password_check" layoutX="202.0" layoutY="113.0" text="Пароль должен содержать минимум 4 симолов" textFill="#bc1515" visible="false" />
          </children>
       </AnchorPane>
       <Label layoutX="199.0" layoutY="45.0" lineSpacing="5.0" prefHeight="40.0" prefWidth="303.0" text="Добро пожаловать!" textFill="WHITE">
